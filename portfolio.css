@@ -6,6 +6,41 @@ body {
     background: linear-gradient(135deg, #0f0c29, #302b63, #53354a);
     color: #fff;
     line-height: 1.7;
+    transition: background 0.4s, color 0.4s;
+}
+
+/* ---------- DARK MODE ---------- */
+body.dark {
+    background: #f2f2f2;
+    color: #111;
+}
+
+body.dark section {
+    background: rgba(0,0,0,0.1);
+    color: #111;
+}
+
+body.dark footer {
+    color: #111;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff99ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+#themeToggle:hover {
+    transform: scale(1.1);
 }
 
 /* Header */
@@ -71,8 +106,25 @@ h2 {
     margin: 10px 0;
     background: rgba(255, 255, 255, 0.12);
     border-radius: 12px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 0 8px rgba(255,255,255,0.15);
+}
+
+/* Skill Bar */
+.progress {
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 12px;
+    margin-top: 8px;
+}
+
+.bar {
+    width: 0;
+    height: 12px;
+    background: #ff80ff;
+    transition: width 1.5s ease-in-out;
 }
 
 /* Qualification Table */
@@ -103,7 +155,7 @@ td {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Hobbies Section */
+/* Hobbies */
 .hobby-list li {
     margin: 15px 0;
     background: rgba(255,255,255,0.08);
@@ -130,8 +182,6 @@ td {
     align-items: center;
 }
 
-
-/* Instagram gradient */
 .insta {
     background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5);
     color: #fff;
@@ -142,7 +192,6 @@ td {
     color: #fff;
 }
 
-/* Hover effect */
 .icon:hover {
     transform: scale(1.15);
     box-shadow: 0 0 20px rgba(255,255,255,0.9);
@@ -171,12 +220,32 @@ td {
     font-size: 1.1rem;
     color: #000;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .contact-form button:hover {
     background: #ffc0ff;
-    box-shadow: 0 0 10px #fff;
+}
+
+/* ---------- PROJECT CARDS ---------- */
+.project-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: black;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    background: grey;
 }
 
 /* Footer */
@@ -186,4 +255,280 @@ footer {
     margin-top: 40px;
     font-size: 1rem;
     opacity: 0.8;
+}
+
+/* -------- MEDIA SECTION -------- */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    align-items: start;
+    margin-top: 10px;
+}
+
+.media-item {
+    padding: 16px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    text-align: center;
+}
+
+.media-item h3 {
+    margin: 0 0 10px 0;
+    color: #ffd7ff;
+}
+
+.media-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.media-controls button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #ff99ff;
+    color: #000;
+}
+
+.media-controls button:hover {
+    background: #ffc0ff;
+}
+
+.small {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-top: 8px;
+    color: #fff;
+}
+
+/* ---------- DARK MODE EXTENSIONS ---------- */
+/* Dark mode media items */
+body.dark .media-item {
+    background: rgba(0,0,0,0.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+body.dark .media-item h3 {
+    color: #7a2a7a;
+}
+
+/* Dark Mode project cards */
+body.dark .project-card {
+    background: rgba(0,0,0,0.15);
+    color: #111;
+}
+
+/* Dark Mode toggle button */
+body.dark #themeToggle {
+    background: #222;
+    color: #fff;
+}
+
+/* ---------- BACK TO TOP BUTTON ---------- */
+#backTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,153,255,0.95);
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.25s;
+    z-index: 200;
+}
+
+/* visible state */
+#backTop.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover */
+#backTop:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+}
+
+/* dark-mode adjustments */
+body.dark #backTop {
+    background: rgba(40,40,40,0.95);
+    color: #fff;
+}
+
+/* ---------- MEDIA SECTION STYLING ---------- */
+#media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.media-item {
+    flex: 1 1 300px;
+    background: rgba(255,255,255,0.12);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.media-item:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.20);
+}
+
+.media-item h3 {
+    margin-bottom: 15px;
+    color: #ffccff;
+    text-shadow: 0 0 10px rgba(255,200,255,0.7);
+}
+
+/* Video & Audio Styling */
+.media-item video,
+.media-item audio {
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* --------- BUTTONS --------- */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;             /* Vertically center */
+    width: 35px;
+    height: 35px;
+    margin-top: -17.5px;  /* Half of height to center */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #f7f7f7;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background: #f0eaff;
+}
+
+/* ---------- SKILLS SECTION FLEXBOX ---------- */
+.skills-list {
+    display: flex;          /* Flexbox layout */
+    flex-direction: column; /* Stack vertically */
+    gap: 15px;              /* Space between skill items */
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    display: flex;          /* Flexbox for text + progress bar */
+    flex-direction: column; /* Stack skill name + bar */
+    align-items: flex-start;
+    background: rgba(255,255,255,0.12);
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(255,255,255,0.15);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.skills-list li:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.20);
+}
+
+/* Skill bars */
+.progress {
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 12px;
+    margin-top: 8px;
+}
+
+.bar {
+    width: 0;
+    height: 12px;
+    background: #ff80ff;
+    transition: width 1.5s ease-in-out;
 }

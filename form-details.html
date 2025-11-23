@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Details</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Form Submission Details</h1>
+</header>
+
+<section class="box">
+    <h2>Your Submitted Information</h2>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Message:</strong></p>
+    <p id="displayMessage" style="white-space: pre-wrap;"></p>
+
+    <a href="index.html" style="display:inline-block;margin-top:20px;padding:10px 15px;background:#ff99ff;color:#000;border-radius:8px;text-decoration:none;">Back to Portfolio</a>
+</section>
+
+<script>
+// Read form data from localStorage
+const name = localStorage.getItem("formName") || "Not provided";
+const email = localStorage.getItem("formEmail") || "Not provided";
+const message = localStorage.getItem("formMessage") || "Not provided";
+
+// Display the data in the HTML
+document.getElementById("displayName").textContent = name;
+document.getElementById("displayEmail").textContent = email;
+document.getElementById("displayMessage").textContent = message;
+</script>
+
+</body>
+</html>

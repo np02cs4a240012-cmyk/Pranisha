@@ -5,120 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranisha Basnet | Portfolio</title>
     <link rel="stylesheet" href="portfolio.css">
+    <!-- FONT AWESOME ICONS -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <h1>🌸 Pranisha Basnet</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#qualification">Qualification</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<!-- DARK MODE BUTTON -->
+<button id="themeToggle">🌙</button>
 
-    <!-- ABOUT -->
-    <section id="about" class="box">
-        <h2>About Me</h2>
-        <p>
-            Hi! I’m <strong>Pranisha Basnet</strong>, a 19-year-old BSc (Hons) Computer Science student at 
-            Biratnagar International College. I love technology, coding, and creating things that make life easier.
-            I enjoy solving problems, learning new ideas, and building meaningful projects that help people.
-        </p>
-    </section>
+<!-- HEADER -->
+<header class="header">
+    <h1>🌸 Pranisha Basnet</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#qualification">Qualification</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <!-- SKILLS -->
-    <section id="skills" class="box">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>💻 HTML, CSS, JavaScript</li>
-            <li>🛢️ PHP, MySQL</li>
-            <li>☕ Java Programming</li>
-            <li>🧩 Problem Solving</li>
-        </ul>
-    </section>
+<!-- ABOUT -->
+<section id="about" class="box">
+    <h2>About Me</h2>
+    <p>
+        Hi! I’m <strong>Pranisha Basnet</strong>, a 19-year-old BSc (Hons) Computer Science student at 
+        Biratnagar International College. I love technology, coding, and creating helpful systems.
+    </p>
+</section>
 
-    <!-- QUALIFICATIONS -->
-    <section id="qualification" class="box">
-        <h2>Qualification</h2>
+<!-- SKILLS -->
+<section id="skills" class="box">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>HTML, CSS, JavaScript <div class="progress"><div class="bar" data-width="90%"></div></div></li>
+        <li>PHP, MySQL <div class="progress"><div class="bar" data-width="75%"></div></div></li>
+        <li>Java Programming <div class="progress"><div class="bar" data-width="80%"></div></div></li>
+        <li>Problem Solving <div class="progress"><div class="bar" data-width="85%"></div></div></li>
+    </ul>
+</section>
 
-        <table>
-            <tr>
-                <th>Degree / Qualification</th>
-                <th>Institution</th>
-                <th>Grade</th>
-            </tr>
-            <tr>
-                <td>SEE</td>
-                <td>Gautam Buddha Memorial Secondary School</td>
-                <td>B</td>
-            </tr>
-            <tr>
-                <td>+2</td>
-                <td>Sikshadeep Higher Secondary School</td>
-                <td>A</td>
-            </tr>
-            <tr>
-                <td>BSc (Hons) Computer Science</td>
-                <td>Biratnagar International College</td>
-                <td>Ongoing</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- HOBBIES -->
-    <section id="hobbies" class="box">
-        <h2>Hobbies & Interests</h2>
-
-        <ul class="hobby-list">
-            <li>📚 <strong>Reading Novels</strong> – I love getting lost in stories.  
-        Fantasy books spark my imagination, mystery books keep me guessing,  
-        and motivational books help me stay positive in life.</li>
-
-            <li>🎨 <strong>Painting & Art</strong> – I enjoy making cute watercolor and digital artworks.  
-        It relaxes me and lets me express whatever I’m feeling in a creative way.</li>
-
-            <li>📸 <strong>Photography</strong> – I like capturing pretty moments, especially nature,  
-        sunsets, and random things that look aesthetic to me.</li>
-
-            <li>🎧 <strong>Music</strong> – I enjoy energetic and upbeat music that gives me a strong vibe  
-        and keeps me motivated throughout the day.</li>
-        </ul>
-    </section>
-
-    <!-- CONTACT -->
-<section id="contact" class="box">
-    <h2>Contact Me</h2>
-
-   <div class="social-icons">
-    <a href="https://instagram.com/__.pranisha" target="_blank" class="icon insta">
-        <i class="fab fa-instagram"></i>
-    </a>
-
-    <a                                                                                   href="mailto:pranishab369@gmail.com" target="_blank" class="icon gmail">
-        <i class="fas fa-envelope"></i>
-    </a>
-</div>
-
-</div>
+<!-- PROJECTS -->
+<section id="projects" class="box">
+    <h2>My Projects</h2>
+    <div class="project-container">
+        <!-- Weather App Project Card -->
+        <div class="project-card" data-link="https://np02cs4a240012-cmyk.github.io/weather_app/">
+            <h3>Weather App</h3>
+            <p>Click to open</p>
 
     </div>
+</section>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email Address">
-        <textarea placeholder="Your Message..."></textarea>
-        <button type="submit">Send Message</button>
+    </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section id="qualification" class="box">
+    <h2>Qualification</h2>
+    <table>
+        <tr><th>Degree</th><th>Institution</th><th>Grade</th></tr>
+        <tr><td>SEE</td><td>GBMSS</td><td>B</td></tr>
+        <tr><td>+2</td><td>Sikshadeep</td><td>A</td></tr>
+        <tr><td>BSc CS</td><td>BIC</td><td>Ongoing</td></tr>
+    </table>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies" class="box">
+    <h2>Hobbies</h2>
+    <ul class="hobby-list">
+        <li>📚 <strong>Reading Novels</strong> – I love getting lost in stories.</li>
+        <li>🎨 <strong>Painting & Art</strong> – I enjoy making watercolor and digital artworks.</li> 
+        <li>📸 <strong>Photography</strong> – I like capturing nature and aesthetic moments.</li> 
+        <li>🎧 <strong>Music</strong> – Energetic and upbeat music keeps me motivated.</li> 
+    </ul>
+</section>
+
+<!-- MEDIA SECTION -->
+<section id="media" class="box">
+    <h2>Media</h2>
+
+    <!-- Video -->
+    <div class="media-item">
+        <h3>Video</h3>
+        <video width="320" height="240" controls>
+           <source src="myvideo.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Audio -->
+    <div class="media-item">
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="myaudio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- ⭐ IMAGE SLIDER ADDED HERE -->
+    <div class="media-item">
+        <h3>Image Slider</h3>
+
+        <div class="slider-container">
+            <div class="slider">
+                <img src="image1.jpg" class="slide active">
+                <img src="image2.jpg" class="slide">
+                <img src="image3.jpg" class="slide">
+            </div>
+
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+
+</section>
+
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="box">
+    <h2>Contact Me</h2>
+    <div class="social-icons">
+        <a href="https://instagram.com/__.pranisha" target="_blank" class="icon insta"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:pranishab369@gmail.com" class="icon gmail"><i class="fas fa-envelope"></i></a>
+    </div>
+    <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <textarea id="message" placeholder="Your Message..."></textarea>
+        <button type="submit">Send</button>
+        <p id="formMessage"></p>
     </form>
 </section>
 
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Pranisha Basnet | Designed with 💜
-    </footer>
+<!-- BACK TO TOP -->
+<button id="backTop">⬆</button>
+<footer>© 2025 Pranisha Basnet | Designed with 💜</footer>
 
+<!-- LINK TO JS -->
+<script src="portfolio.js"></script>
 </body>
 </html>
